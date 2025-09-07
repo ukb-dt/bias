@@ -62,6 +62,8 @@ Take two reveals the pentad's loop as statistical theater: Frequentist convergen
 ![](filter.jpg)
 
 ```py
+# Generate the "Sieve of Bias" diagram and save it as filter.jpg
+
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 
@@ -75,7 +77,7 @@ ax.text(0.5, 0.9, "Ontology\n(Persistence / Bass / Syntax)",
 
 # Arrow down into sieve
 ax.annotate("", xy=(0.5, 0.75), xytext=(0.5, 0.83),
-            arrowprops=dict(arrowstyle="->", lw=2, color="black"))
+            arrowprops=dict(arrowstyle="->", lw=2))
 
 # Draw sieve as ellipse
 sieve = patches.Ellipse((0.5,0.6), 0.6, 0.15, facecolor="lightgrey", edgecolor="black")
@@ -85,7 +87,7 @@ ax.text(0.5,0.6,"Bias as Sieve\n(selection • confounding • measurement)",
 
 # Arrow down from sieve
 ax.annotate("", xy=(0.5, 0.45), xytext=(0.5, 0.525),
-            arrowprops=dict(arrowstyle="->", lw=2, color="black"))
+            arrowprops=dict(arrowstyle="->", lw=2))
 
 # Epistemology (variation that survives)
 ax.text(0.5, 0.3, "Epistemology\n(Variation that Survives:\nMelody / Semantics / Myth)", 
@@ -94,7 +96,7 @@ ax.text(0.5, 0.3, "Epistemology\n(Variation that Survives:\nMelody / Semantics /
 
 # Loop arrow back to top
 ax.annotate("", xy=(0.75, 0.9), xytext=(0.75, 0.32),
-            arrowprops=dict(arrowstyle="->", lw=2, linestyle="--", color="blue"))
+            arrowprops=dict(arrowstyle="->", lw=2, linestyle="--"))
 ax.text(0.78, 0.6, "Recursion:\nEpistemology reseeds Ontology", fontsize=9, rotation=90, va='center')
 
 # Remove axes
@@ -102,7 +104,14 @@ ax.set_xlim(0,1)
 ax.set_ylim(0,1)
 ax.axis("off")
 
-plt.title("🎭 The Sieve of Bias: From Ontology to Epistemology", fontsize=14, weight='bold')
+plt.title("The Sieve of Bias: From Ontology to Epistemology", fontsize=14, weight='bold')
+
+# Save and show
+output_path = "./filter.jpg"
+plt.savefig(output_path, bbox_inches="tight", dpi=200)
 plt.show()
+
+output_path
+
 
 ```
