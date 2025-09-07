@@ -58,3 +58,51 @@ The pentad loops biases into its structure: Each act incorporates a bias (select
 ### Epilogue: Biased Recursion as Becoming
 Take two reveals the pentad's loop as statistical theater: Frequentist convergence meets Bayesian revision in biased encores, where selection/confounding/measurement mythologize persistence. We are the archive's actors—update priors from fruit, but doubt their eternity. In Ubuntu recursion, biases bind "we are": collective performances yield entangled knowledge. Design wisely: Simulate full loops (frequentist trials) with adaptive beliefs (Bayesian updates) to harvest truer myths. Existence loops eternally—embrace the biases, or stagnate in illusion.
 # C
+
+![](filter.jpg)
+
+```py
+import matplotlib.pyplot as plt
+import matplotlib.patches as patches
+
+# Create figure
+fig, ax = plt.subplots(figsize=(8,6))
+
+# Ontology (persistence)
+ax.text(0.5, 0.9, "Ontology\n(Persistence / Bass / Syntax)", 
+        ha='center', va='center', fontsize=12, weight='bold', color='darkgreen',
+        bbox=dict(facecolor='white', edgecolor='darkgreen', boxstyle="round,pad=0.5"))
+
+# Arrow down into sieve
+ax.annotate("", xy=(0.5, 0.75), xytext=(0.5, 0.83),
+            arrowprops=dict(arrowstyle="->", lw=2, color="black"))
+
+# Draw sieve as ellipse
+sieve = patches.Ellipse((0.5,0.6), 0.6, 0.15, facecolor="lightgrey", edgecolor="black")
+ax.add_patch(sieve)
+ax.text(0.5,0.6,"Bias as Sieve\n(selection • confounding • measurement)", 
+        ha='center', va='center', fontsize=10, weight='bold')
+
+# Arrow down from sieve
+ax.annotate("", xy=(0.5, 0.45), xytext=(0.5, 0.525),
+            arrowprops=dict(arrowstyle="->", lw=2, color="black"))
+
+# Epistemology (variation that survives)
+ax.text(0.5, 0.3, "Epistemology\n(Variation that Survives:\nMelody / Semantics / Myth)", 
+        ha='center', va='center', fontsize=12, weight='bold', color='darkred',
+        bbox=dict(facecolor='white', edgecolor='darkred', boxstyle="round,pad=0.5"))
+
+# Loop arrow back to top
+ax.annotate("", xy=(0.75, 0.9), xytext=(0.75, 0.32),
+            arrowprops=dict(arrowstyle="->", lw=2, linestyle="--", color="blue"))
+ax.text(0.78, 0.6, "Recursion:\nEpistemology reseeds Ontology", fontsize=9, rotation=90, va='center')
+
+# Remove axes
+ax.set_xlim(0,1)
+ax.set_ylim(0,1)
+ax.axis("off")
+
+plt.title("🎭 The Sieve of Bias: From Ontology to Epistemology", fontsize=14, weight='bold')
+plt.show()
+
+```
